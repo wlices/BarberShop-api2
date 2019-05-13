@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberShopAPI", "BarberShopAPI\BarberShopAPI.csproj", "{6E759869-FBCB-497F-A0F3-316B2B04E18E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberShop.Infra", "BarberShop.Infra\BarberShop.Infra.csproj", "{07D6B1DD-EFB3-4144-B621-28E54C900724}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E759869-FBCB-497F-A0F3-316B2B04E18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E759869-FBCB-497F-A0F3-316B2B04E18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E759869-FBCB-497F-A0F3-316B2B04E18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E759869-FBCB-497F-A0F3-316B2B04E18E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07D6B1DD-EFB3-4144-B621-28E54C900724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07D6B1DD-EFB3-4144-B621-28E54C900724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07D6B1DD-EFB3-4144-B621-28E54C900724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07D6B1DD-EFB3-4144-B621-28E54C900724}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DC1ADC7-ADC0-4BC4-B818-8807B648DB93}
+	EndGlobalSection
+EndGlobal
