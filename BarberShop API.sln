@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberShopAPI", "BarberShopAPI\BarberShopAPI.csproj", "{6E759869-FBCB-497F-A0F3-316B2B04E18E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BarberShopAPI", "BarberShopAPI\BarberShopAPI.csproj", "{6E759869-FBCB-497F-A0F3-316B2B04E18E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberShop.Infra", "BarberShop.Infra\BarberShop.Infra.csproj", "{07D6B1DD-EFB3-4144-B621-28E54C900724}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberShopAPI.Infra", "BarberShop.Infra\BarberShopAPI.Infra.csproj", "{07D6B1DD-EFB3-4144-B621-28E54C900724}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
