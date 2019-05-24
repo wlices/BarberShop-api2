@@ -8,14 +8,17 @@ using BarberShopAPI.Infra.Models;
 
 namespace BarberShopAPI.Infra.Context
 {
-    class BarberShopAPIContext : DbContext
+    public class BarberShopContext : DbContext
     {
-        public BarberShopAPIContext() : base(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BarberShopDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+        public BarberShopContext() : base(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BarberShopDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
         {
 
         }
 
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<Scheduling> Schedulings { get; set; }
+        public DbSet<Service> Services { get; set; }
     }
 
 }

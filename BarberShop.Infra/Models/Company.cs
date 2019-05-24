@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BarberShopAPI.Infra.Models
 {
-    class Companycs
+    public class Company
     {
         public int Id { get; set; }
         public String RazaoSocial { get; set; }

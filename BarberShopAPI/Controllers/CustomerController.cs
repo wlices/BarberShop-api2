@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BarberShopAPI.Infra.Context;
+using BarberShopAPI.Infra.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,9 +15,12 @@ namespace BarberShopAPI.Controllers
     {
         // GET: api/<controller>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public ActionResult<IEnumerable<Customer>> Get()
         {
-            return new string[] { "value1", "value2" };
+            var contexto = new BarberShopContext();
+            var items = contexto.Customers.ToList();
+
+            return items;
         }
 
         // GET api/<controller>/5

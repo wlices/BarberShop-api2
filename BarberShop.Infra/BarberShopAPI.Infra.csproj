@@ -55,7 +55,12 @@
   <ItemGroup>
     <Compile Include="Context\BarberShopContext.cs" />
     <Compile Include="Mappings\CustomerMap.cs" />
-    <Compile Include="Models\Companycs.cs" />
+    <Compile Include="Migrations\201905240239106_V1.cs" />
+    <Compile Include="Migrations\201905240239106_V1.Designer.cs">
+      <DependentUpon>201905240239106_V1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Scheduling.cs" />
     <Compile Include="Models\Service.cs" />
@@ -68,6 +73,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905240239106_V1.resx">
+      <DependentUpon>201905240239106_V1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
