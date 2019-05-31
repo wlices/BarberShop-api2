@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace BarberShopAPI.Infra.Models
 {
-    public class Company
+    public class User
     {
         public int Id { get; set; }
-        public String RazaoSocial { get; set; }
-        public String NomeFantasia { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 }

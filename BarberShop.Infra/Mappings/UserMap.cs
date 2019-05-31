@@ -8,16 +8,14 @@ using System.Threading.Tasks;
 
 namespace BarberShopAPI.Infra.Mappings
 {
-    public class CustomerMap : EntityTypeConfiguration<Customer>
+    public class UserMap : EntityTypeConfiguration<User>
     {
-        public CustomerMap()
+        public UserMap()
         {
             HasKey(x => x.Id);
             Property(x => x.Name);
-            Property(x => x.LastName);
-            Property(x => x.Cpf);
             Property(x => x.Email);
-            Property(x => x.Phone);
+            Property(x => x.Password);
         }
     }
 }

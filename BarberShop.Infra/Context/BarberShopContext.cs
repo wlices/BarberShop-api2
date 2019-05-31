@@ -15,14 +15,17 @@ namespace BarberShopAPI.Infra.Context
         {
         }
 
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<Company> Companies { get; set; }
-        public DbSet<Scheduling> Schedulings { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Service> Services { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Scheduling> Schedulings { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Configurations.Add(new UserMap());
+            modelBuilder.Configurations.Add(new ServiceMap());
             modelBuilder.Configurations.Add(new CustomerMap());
+            modelBuilder.Configurations.Add(new SchedulingMap());
         }
     }
 
