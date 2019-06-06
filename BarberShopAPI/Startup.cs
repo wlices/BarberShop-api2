@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using BarberShopAPI.Models;
 
 namespace BarberShopAPI
 {
@@ -31,6 +33,9 @@ namespace BarberShopAPI
 
             services.AddScoped<BarberShopContext, BarberShopContext>();//singleton
             services.AddTransient<CustomerRepository, CustomerRepository>();
+
+            services.AddDbContext<BarberShopAPIContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("BarberShopAPIContext")));
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
