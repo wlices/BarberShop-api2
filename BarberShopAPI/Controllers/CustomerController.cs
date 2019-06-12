@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using BarberShopAPI.Infra.Context;
 using BarberShopAPI.Infra.Models;
 using BarberShopAPI.Infra.Repository;
 
@@ -26,6 +25,26 @@ namespace BarberShopAPI.Controllers
         public Task<IEnumerable<Customer>> GetCustomers()
         {
             return _customerRepository.GetAllItems();
+        }
+
+        public Customer GetCustomer(int id)
+        {
+            return _customerRepository.GetById(id);
+        }
+
+        public void UpdateCustomer(Customer customer)
+        {
+            _customerRepository.Update(customer);
+        }
+
+        public void CreateCustomer(Customer customer)
+        {
+            _customerRepository.Create(customer);
+        }
+
+        public void DeleteCustomer(int id)
+        {
+            _customerRepository.Delete(id);
         }
 
         // GET api/<controller>/5

@@ -33,6 +33,9 @@ namespace BarberShopAPI
 
             services.AddScoped<BarberShopContext, BarberShopContext>();//singleton
             services.AddTransient<CustomerRepository, CustomerRepository>();
+            services.AddTransient<ServiceRepository, ServiceRepository>();
+            services.AddTransient<UserRepository, UserRepository>();
+            services.AddTransient<SchedulingRepository, SchedulingRepository>();
 
             services.AddDbContext<BarberShopAPIContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("BarberShopAPIContext")));
