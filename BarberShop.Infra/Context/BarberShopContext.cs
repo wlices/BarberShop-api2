@@ -11,7 +11,7 @@ namespace BarberShopAPI.Infra.Context
 {
     public class BarberShopContext : DbContext
     {
-        public BarberShopContext() : base(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BarberShopDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+        public BarberShopContext() : base(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
         {
         }
 

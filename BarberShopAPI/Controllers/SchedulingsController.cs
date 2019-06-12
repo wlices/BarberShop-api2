@@ -27,7 +27,7 @@ namespace BarberShopAPI.Controllers
             return _schedulingRepository.GetAllItems();
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public Scheduling GetScheduling(int id)
         {
             return _schedulingRepository.GetById(id);

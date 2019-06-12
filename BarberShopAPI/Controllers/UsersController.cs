@@ -27,7 +27,7 @@ namespace BarberShopAPI.Controllers
             return _userRepository.GetAllItems();
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public User GetUser(int id)
         {
             return _userRepository.GetById(id);
