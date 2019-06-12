@@ -12,8 +12,7 @@ using BarberShopAPI.Infra.Repository;
 namespace BarberShopAPI.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
-    public class UsersController : ControllerBase
+    public class UsersController : Controller
     {
         private readonly UserRepository _userRepository;
 
@@ -22,26 +21,31 @@ namespace BarberShopAPI.Controllers
             _userRepository = userRepository;
         }
 
+        [HttpGet]
         public Task<IEnumerable<User>> GetUsers()
         {
             return _userRepository.GetAllItems();
         }
 
+        [HttpGet]
         public User GetUser(int id)
         {
             return _userRepository.GetById(id);
         }
 
+        [HttpPut]
         public void UpdateUser(User user)
         {
             _userRepository.Update(user);
         }
 
+        [HttpPost]
         public void CreateUser(User user)
         {
             _userRepository.Create(user);
         }
 
+        [HttpDelete]
         public void DeleteUser(int id)
         {
             _userRepository.Delete(id);

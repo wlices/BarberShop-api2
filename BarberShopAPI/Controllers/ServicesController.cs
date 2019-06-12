@@ -18,26 +18,31 @@ namespace BarberShopAPI.Controllers
             _serviceRepository = serviceRepository;
         }
 
+        [HttpGet]
         public Task<IEnumerable<Service>> GetServices()
         {
             return _serviceRepository.GetAllItems();
         }
 
+        [HttpGet]
         public Service GetService(int id)
         {
             return _serviceRepository.GetById(id);
         }
 
+        [HttpPut]
         public void UpdateService(Service service)
         {
             _serviceRepository.Update(service);
         }
 
+        [HttpPost]
         public void CreateService(Service service)
         {
             _serviceRepository.Create(service);
         }
 
+        [HttpDelete]
         public void DeleteService(int id)
         {
             _serviceRepository.Delete(id);

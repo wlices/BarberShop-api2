@@ -27,21 +27,25 @@ namespace BarberShopAPI.Controllers
             return _customerRepository.GetAllItems();
         }
 
+        [HttpGet]
         public Customer GetCustomer(int id)
         {
             return _customerRepository.GetById(id);
         }
 
+        [HttpPut]
         public void UpdateCustomer(Customer customer)
         {
             _customerRepository.Update(customer);
         }
 
+        [HttpPost]
         public void CreateCustomer(Customer customer)
         {
             _customerRepository.Create(customer);
         }
 
+        [HttpDelete]
         public void DeleteCustomer(int id)
         {
             _customerRepository.Delete(id);
