@@ -1,4 +1,4 @@
-﻿using System;
+﻿zusing System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,7 +14,10 @@ namespace BarberShopAPI
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            CreateWebHostBuilder(args)
+                .UseUrls("http://localhost:3000/")
+                .Build()
+                .Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
